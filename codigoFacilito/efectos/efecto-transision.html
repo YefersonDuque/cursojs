@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            let elem = $('#caja1');
+            //Mostrar elemento
+            // $('#btn1').click(function(){
+            //     elem.show();
+            // })
+            // //Ocultar elemento
+            // $('#btn2').click(function(){
+            //     elem.hide();
+            // })
+            //------------------------------
+            //Mostrar elemento con efecto suave
+            $('#btn1').click(function(){
+                elem.slideDown(1000);
+            })
+            //Ocultar elemento con efecto suave
+            $('#btn2').click(function(){
+                elem.slideUp(1000);
+            })
+            //------------------------
+            //Mostrar elemento apareciendo transparentoso
+            // $('#btn1').click(function(){
+            //     elem.fadeIn(5000); //En los aprentesis se pone la durabilidad de la transisión por milisegundos
+            // })
+            // //Ocultar elemento desapareciendo transparentoso
+            // $('#btn2').click(function(){
+            //     elem.fadeOut(5000);
+            // })
+
+        })
+    </script>
+    <style>
+        #caja1{
+            background:rgba(56,56, 56,0.8);
+            display: block;
+            height: 80px;
+            margin: 5% auto;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="caja1"></div>
+    <button id="btn1">Mostrar</button>
+    <button id="btn2">Ocultar</button>
+</body>
+</html>
