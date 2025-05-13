@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+        // let caja1bg, v = 0;
+        // $(function () {
+        // --------VINCULAR EVENTOS----------
+        //Aquí al pasar el mouse muestre y cambia de color
+
+        // $('#caja1').mouseover(function(){
+        //     caja1bg = $(this).css('background');
+        //     $(this).css('background','red');
+        // })
+        // $('#caja1').mouseout(function(){
+        //     $(this).css('background',caja1bg);
+        // })
+        //----------------------------------
+        // $('#caja1').on('mouseover', function () {
+        //     caja1bg = $(this).css('background');
+        //     $(this).css('background', 'red');
+        // })
+        // $('#caja1').on('mouseout', function () {
+        //     $(this).css('background', caja1bg);
+        // })
+
+        //Esta es la forma abreviada con 'on' que esta arriba de este.
+        //     $('#caja1').on({
+        //         mouseover: function () {
+        //             caja1bg = $(this).css('background');
+        //             $(this).css('background', 'red');
+        //         },
+        //         mouseout: function () {
+        //             $(this).css('background', caja1bg);
+        //         }
+        //     })
+        // })
+
+        //--------------DESVINCULAR EVENTOS-----------------
+
+        // let caja1bg, v = 0;
+
+        // $(function () {
+
+        //     $('#caja1').on({
+        //         mouseover: function () {
+        //             v++;
+        //             caja1bg = $(this).css('background');
+        //             $(this).css('background', 'red');
+        //         },
+        //         mouseout: function () {
+        //             $(this).css('background', caja1bg);
+
+        //             if (v >= 3) { //Se desvincula con un 'off' y un contador y deciri cuantas veces se repite
+        //                 $('#caja1').off('mouseover');
+        //             }
+        //         }
+        //     })
+        // })
+
+        //----------------PARA REPETIR SOLO UNA VEZ-------
+
+        $(function () {
+            $('#caja1').one({ //Al poner 'one', solo se va  aejecutar una vez sin necesidad de poner un contador
+                mouseover: function () {
+                    caja1bg = $(this).css('background');
+                    $(this).css('background', 'red');
+                },
+                mouseout: function () {
+                    $(this).css('background', caja1bg);
+                }
+            })
+        })
+
+    </script>
+    <style>
+        BODY,
+        HTML {
+            background-color: #CCC;
+            color: blue;
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            display: block;
+            background: #000;
+            height: 50px;
+            margin: 5% auto;
+            width: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="caja1"></div>
+</body>
+
+</html>
