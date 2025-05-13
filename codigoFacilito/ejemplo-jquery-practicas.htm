@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Buenas Prácticas con jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .resultado {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+    }
+    .dinamico {
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ejemplo de buenas prácticas con jQuery</h1>
+
+  <input type="text" id="nombre" placeholder="Escribe tu nombre">
+  <button id="btnSaludo">Saludar</button>
+
+  <div class="resultado" id="resultado"></div>
+
+  <hr>
+
+  <button id="agregarBtn">Agregar botón dinámico</button>
+  <div id="contenedor"></div>
+
+  <script>
+    // ✅ Usar la forma abreviada de $(document).ready
+    $(function () {
+      // ✅ Declarar variables con const o let
+      const $btnSaludo = $('#btnSaludo');
+      const $nombre = $('#nombre');
+      const $resultado = $('#resultado');
+
+      // ✅ Usar .on en lugar de .click
+      $btnSaludo.on('click', function () {
+        const nombreUsuario = $nombre.val().trim();
+
+        if (nombreUsuario === '') {
+          $resultado
+            .html('Por favor, escribe tu nombre.')
+            .css('color', 'red');
+        } else {
+          $resultado
+            .html(`¡Hola, <strong>${nombreUsuario}</strong>!`)
+            .css('color', 'green');
+        }
+      });
+
+      // ✅ Evento para agregar un botón dinámico
+      $('#agregarBtn').on('click', function () {
+        $('#contenedor').html(`
+          <button class="dinamico">Botón agregado dinámicamente</button>
+        `);
+      });
+
+      // ✅ Delegación de eventos para elementos que se agregan después
+      $(document).on('click', '.dinamico', function () {
+        alert('¡Hiciste clic en el botón dinámico!');
+      });
+    });
+  </script>
+
+</body>
+</html>

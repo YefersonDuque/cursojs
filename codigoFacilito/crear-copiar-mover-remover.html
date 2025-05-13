@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>C.C.M.R.</title>
+    <script>
+        $(function () {
+            $('button').on('click', function(){
+                
+                //Mover el ultimo elemento y ponerlo arriba
+                // $('ol li:last').prependTo('ol:first');
+                
+                //Mover el primer elemento y ponerlo abajo
+                // $('ol:first').append($('ol li:first'));
+                
+                //agregar elementos después de una selección
+                // $('ol li:first').insertAfter('#e1');
+                
+                //Antes de la selección
+                // $('ol li:first').insertBefore('#e1');
+                // $('#e1').after($('ol li:first'))
+
+                //Clonar un elemento
+                // let clon = $('ol li:first').clone();
+                // $('#e1').before($(clon));
+
+                //Crear nuevo elemento
+                // let nuevo_e = $('<p>HOLA</p>')  
+                // $('#e1').append(nuevo_e);
+
+                //Remover un elemento
+                $('ol li:last').remove();
+            })
+        })
+    </script>
+    <style>
+        body,
+        html {
+            background: #000;
+            color: #FFF;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            display: block;
+            margin: 0 auto 50px auto;
+            width: 365px;
+        }
+        ol{
+            display: block;
+            width: 500px;
+            margin: 0 auto;
+        }
+        ol li{
+            background: #088A29;
+            margin: 5px auto;
+            height: 30px;
+            width: 100%;
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            width: 80px;
+        }
+        div{
+            background: #FE2E64;
+            height: 50px;
+            display: block;
+            width: 400px;
+            margin: 2px auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="Free-PNG-Images-HD.png" height="100px" alt="CF">
+</header>
+<ol>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+    <li>Elemento 4</li>
+</ol>
+<button id="test">Ejecutar</button>
+<div id="e1">Div 1</div>
+<div id="e2">Div 2</div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensiones</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            //Para obtener el ancho de un elemento seleccionado. El ".css("width")", indica los px que tenga
+            console.log($('header img').width(100));
+            // console.log($('#e1').height());
+            let pos = $('#e2 p').position();
+            let pos2 = $('#e2 p').offset();
+
+            console.log('Posicion Left: ' + pos.left + ' Posicion Top' + pos.top);
+            console.log('Posicion Left: ' + pos2.left + ' Posicion Top' + pos2.top);
+            
+            
+        })
+    </script>
+    <style>
+        body,html{
+            background-color: #000;
+            margin:0;
+            padding: 0;
+        }
+
+        header{
+            display: block;
+            margin: 0 auto;
+            width: 365px;
+        }
+        #e1,#e2{
+            background:#0080FF;
+            display: block;
+            height: 100px;
+            margin: 20px auto;
+            width: 400px;
+        }
+        #e1{
+            background: #FF0040;
+            height: 150px;
+            border-radius: 60px 60px 0 0;
+
+        }
+        #e2{
+            padding: 15px;
+            border-radius: 0 0 60px 60px;
+        }
+        p{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header> <img src="Free-PNG-Images-HD.png" alt="CF"></header>
+    <div id="e1"></div>
+    <div id="e2"><p>Hola amigos</p></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class query</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .test{
+            background-color: red;
+        }
+    </style>
+    <script>
+        $(function(){
+            $(document).on("click",function(){
+
+                //Esta linea agrega la clase al darle click si no la tiene.
+                // $("#test").addClass("test");
+
+                //Si la tiene con este se la quita
+                // $("#test").removeClass("test");
+
+                //Este otro, si la tiene se la quita y si no la tiene se la pone
+                $("#test").toggleClass("test");
+                if($("#test").hasClass("test")){
+                    $("#test").text("HEY!! Soy rojo");
+                }else{
+                    $("#test").text("No soy rojo");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="test">Click on me</div>
+</body>
+</html>

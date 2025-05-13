@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            // $('#prueba').removeAttr('class');
+            // let clase = $('#prueba').attr('class');
+            // alert(clase);
+            $('a').on('click', function(e){
+                e.preventDefault();
+                let link = $(this).attr('href');
+                alert("Usted esta saliendo de nuestro sitio");
+                location.href=link;
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="prueba" class="pruebaClass"></div>
+    <a href="http://www.codigofacilito.com">Código Facilito</a>
+    <!-- <form>
+        <input type="">
+        <input type="submit">
+    </form> -->
+</body>
+</html>

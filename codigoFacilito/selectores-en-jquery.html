@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            let selecccion = $('.ejem1');
+            if (selecccion.length)
+                console.log('Existe ' + selecccion.length);
+            else
+                console.log('No existe el elemento seleccionado.');
+            //Aquí muestra el selector que no tiene la clase 'cli'
+            // selecccion.not('.cli').text("No tiene el elemento cli")
+
+            //Aquí muestra el selector que tiene un '<p>'
+            //selecccion.has('p').text('Este elemento tiene un parrafo.');
+
+            //Aquí selecciona el elemento 1 del arreglo de li
+            $('li').first().html("Este es el primer li")
+            //Aquí se indica que elemento seleccionar del arreglo con eq(#).
+            $('li').eq(3).text("Seleccione el elemento  4")
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="ejem1">
+        <p></p>
+    </div>
+    <div class="ejem1">
+        <span></span>
+    </div>
+    <span></span>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+
+</html>

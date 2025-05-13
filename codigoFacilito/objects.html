@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objects in js</title>
+</head>
+<body>
+	<script>
+		var Gato = new gato("Pancho");
+
+		function gato(nombre){
+			this.nombre = nombre;
+			this.maulla = function(){
+				alert("miauu");
+			};
+		}
+		alert("Mi gato se llama "+ Gato.nombre);
+		Gato.maulla();
+	</script>
+	
+	
+</body>
+</html>
