@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function () {
+            //Método para agreagr elemento (cuando son 3 atributos escribe)
+            $('ul li').each(function (index, elemento) {
+                $.data(elemento, 'Posicion', index);
+            })
+            //Método para obtener elemento (cuando son dos elementos obtiene)
+            $('ul li').each(function (index, elemento) {
+                console.log($.data(elemento, 'Posicion'));
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>Uno</li>
+        <li>Dos</li>
+        <li>Tres</li>
+    </ul>
+</body>
+
+</html>
