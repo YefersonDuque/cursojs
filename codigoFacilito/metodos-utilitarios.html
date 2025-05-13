@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            $('button').on('click', function () {
+
+                //Eliminar los espacios en la cadena
+                let s = '               hola      num   do    ';
+                console.log(s); //Este sin eliminar espacios
+                console.log($.trim(s)); //Este elimina los espacios que hay al principio y fin
+                
+
+                //Muestra el arreglo seleccionado
+                // let arreglo= ['Dxvtuts','codigoFacilito','Roofdier Dz'];
+                // if($.inArray('Dxvtuts',arreglo) !== -1) 
+                //     console.log(arreglo[$.inArray('Dxvtuts',arreglo)]);
+
+                //Esta parte muestra el arreglo y con el if evita mostrar el arreglo seleccionado.
+                //  $.each(arreglo, function(index, value){
+                //     if(arreglo[index] == 'Roofdier Dz')
+                //      return true;
+                //     console.log("elemento " + index + " valor" + value);
+                //  })
+            })
+        })
+    </script>
+    <style>
+        body,
+        html {
+            background: #000;
+            color: #000;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: block;
+            margin: 0 auto 50px auto;
+            width: 365px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            width: 80px;
+        }
+
+        div {
+            background: #FFF;
+            height: 50px;
+            display: block;
+            width: 400px;
+            margin: 2px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="Free-PNG-Images-HD.png" width="100px" alt="CF">
+    </header>
+    <button id="test">Ejecutar</button>
+    <div id="e1">Métodos utilitarios</div>
+</body>
+
+</html>
