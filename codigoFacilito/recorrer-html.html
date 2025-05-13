@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function () {
+            // console.log($('#padre').children().attr('id')); // Devuelve el id del primer hijo
+            // console.log($('#primero').siblings()); // Devuelve todos los hermanos del elemento con id "primero"  
+            $('ul li').each(function(index, element) {
+                // console.log(index, $(element).text());
+                console.log("Este elemento contiene este texto: " + $(element).text());
+                
+
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <article id="padre">
+            Hey!! :D
+            <div id="test">Soy el hijo</div>
+        </article>
+        <div>
+            <ul>
+                <li id="primero">Soy el primero</li>
+                <li>Soy el que sigue</li>
+                <li>Soy el tercero</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
