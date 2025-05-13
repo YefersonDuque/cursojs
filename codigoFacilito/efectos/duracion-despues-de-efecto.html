@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones 2</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #ejemplo {
+            background-color: rgb(250, 100, 100);
+            height: 200px;
+            width: 400px;
+        }
+    </style>
+    <script>
+        $(function () {
+            //Con esto se regula la velocidad de la transisión
+            $.fx.speeds.lento = 100;
+            $.fx.speeds.masLento = 300;
+            $('#boton').on('click', function () {
+                $('#ejemplo').fadeOut('lento', function () {
+                    $('body').append('El elemento se ha borrado :('); // Aquí se agrega el mensaej que se muestra al presionar el boton
+                    $(this).fadeIn('masLento', function () { //Con esto al eliminar reaparece a la velocidad que se le diga.
+                        $('body').append('<br>--------------Volvío el elemento :)')
+                    })
+                });
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="ejemplo"></div>
+    <button id="boton">Fade out</button>
+</body>
+
+</html>
