@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function(){
+            $('#miInput').on('cambio',function(ev,id){
+                console.log(id);
+                if(this.checked){
+                    $('#miInput').removeAttr('checked');
+                    $('.cambiar').text('Encender');
+                }
+                else{ 
+                    $('#miInput').attr('checked','checked')
+                    $('.cambiar').text('Apagar');
+                }
+            });
+            $('.cambiar').on('click',function(){
+                $('#miInput').trigger('cambio',[$(this).attr('id')]);
+            })
+        });
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="miInput" checked="checked">
+    <button class="cambiar" id="btnUno">Apagar</button>
+    <button class="cambiar" id="btnDos">Apagar</button>
+</body>
+</html>
