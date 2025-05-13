@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/jquery-color-animation.js"></script>  <!-- Libreria color  y animaciones -->
+    <script>
+        $(function () {
+            $('#caja1').animate({
+                marginBottom: 0,
+            }, 5000,//Velocidad 
+                function () {//Transisión arriba. 
+                    $('#caja1').animate({
+                        backgroundColor: '#0fd',//Color
+                        marginTop: -100,//Movimiento.
+                        opacity: 0.5,//Opacidad
+
+                    })
+                });
+        })
+    </script>
+    <style>
+        body,
+        html {
+            padding: 100px;
+        }
+
+        div {
+            display: block;
+            height: 80px;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        #caja1 {
+            background: rgba(56, 56, 56, 0.8);
+            margin-bottom: 100px;
+        }
+
+        #caja2 {
+            background: rgba(89, 69, 36, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="caja1"></div>
+    <div id="caja2"></div>
+</body>
+
+</html>
