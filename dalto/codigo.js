@@ -1,3 +1,2 @@
-let nombre = prompt("Escribe algo")
-
-alert(nombre)
+recipiente = "barbijo";
+alert(recipiente)
