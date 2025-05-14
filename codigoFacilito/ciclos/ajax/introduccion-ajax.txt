@@ -1,0 +1,6 @@
+XMLHttpRequest - AJAX
+Petición Servidor - Asincrónica
+
+let respuesta;
+$.get('pagina.php', Function(resp){respuesta = resp;});
+console.log(response); //Indefinido
