@@ -18,15 +18,13 @@ class Animal {
 class Perro extends Animal{
     constructor(especie,edad,color,raza){
         super(especie,edad,color);
-        this.raza = raza;
+        this.raza = null;
     }
+    //....STATIC....//
     static ladrar(){
         alert("WOW!");
     }
-}
 
-const perro = new Animal("perro", 4, "negro","doberman");
-const gato = new Animal("gato", 3, "gris");
-const pajaro = new Animal("pajaro", 1, "verde");
+}
 
 Perro.ladrar();
