@@ -13,17 +13,17 @@ saludar();
     const operacion = (num1, num2) => { //Al poner las variables en la función (aquí), es como si se declararn por fuera con let 
     num1 = Number(prompt("Ingrese el primer número: "));//Se le pone number antes del prompt para que lo tome como un entero
     num2 = Number(prompt("Ingrese el segundo núemro: "));
-    let opcion = prompt("¿Qué operación quiere realizar?\n" + "1. Suma ( + )\n" + "2. Resta ( - )\n" + "3. Multiplicar( * )\n" + "4. Dividir ( / )")
-    if (opcion == "+") {
+    let opcion = prompt("1: suma, 2:resta, 3:multiplicar, 4:dividir");
+    if (opcion == 1) {
         alert(`El resultado de la suma entre el número ${num1} y ${num2} es: ${num1 + num2}`);
     }
-    else if (opcion == "-") {
+    else if (opcion == 2) {
         alert(`El resultado de la resta entre el número ${num1} y ${num2} es: ${num1 - num2}`);
     }
-    else if (opcion == "*") {
+    else if (opcion == 3) {
         alert(`El resultado de la multiplicación entre el número ${num1} y ${num2} es: ${num1 * num2}`);
     }
-    else if (opcion == "/") {
+    else if (opcion == 4) {
         alert(`El resultado de la división entre el número ${num1} y ${num2} es: ${num1 / num2}`);
 
     }
