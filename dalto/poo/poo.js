@@ -24,7 +24,7 @@ class Perro extends Animal{
     static ladrar(){
         alert("WOW!");
     }
-
+ //antes de seguir ver bien como funciona static
 }
 
 Perro.ladrar();
