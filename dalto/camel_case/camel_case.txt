@@ -1,0 +1,4 @@
+Camel case es en las oraciones la segunda palabra inicia en mayuscula.
+EJE: 
+-holaComoEsta
+-miNombreEsYeferson.....
