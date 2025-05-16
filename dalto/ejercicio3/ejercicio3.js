@@ -47,7 +47,7 @@
 
 
 //Tomar asistencia de alumnos
-
+//Repasar... algo complicado de entender y realizar.
 let cantidad = prompt("¿cuantos alumnos son?");
 let alumnosTotales = [];
 
