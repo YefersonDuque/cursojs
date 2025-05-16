@@ -20,11 +20,15 @@ class Perro extends Animal{
         super(especie,edad,color);
         this.raza = null;
     }
-    //....STATIC....//
-    static ladrar(){
-        alert("WOW!");
+    //....SET....//
+    set setRaza(newName){
+        this.raza=newName;
     }
- //antes de seguir ver bien como funciona static
+    //....GET....// 
+    get getRaza(){
+        return this.raza;
+    }
 }
-
-Perro.ladrar();
+const perro = new Perro("perro",5,"negro","doberman");
+perro.setRaza = "Doberman";
+document.writeln(perro.getRaza);
