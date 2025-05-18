@@ -1,81 +1,60 @@
-
-// A mi manera
-// const entradaFiesta = () => {
-//     nombre = prompt("Ingrese su nombre: ");
-//     edad = Number(prompt("Ingrese su edad: "));
-//     hora = Number(prompt("Ingrese la hora de entrada del 0 al 24, entre las 2 y 5 no paga: "));
-
-//     if(edad < 18  ){
-//         alert(`Señor@ ${nombre}, su edad es ${edad}. Por lo tanto no puede entrar.`);
-//     }else if(hora > 2 && hora < 5){
-//         alert(`Señor@ ${nombre}, esta de suerte. Puede entrar y no paga`)
-//     }else 
-//     {
-//         alert(`Señor@ ${nombre}, puede entrar pero paga.`)
-//     }
-
-// }
-
-// entradaFiesta();
-
-// ...........A manera del curso.........
-//Las personas mayores de edad que pueden entrar a la fiesta, el primer despues de las 2am entra gratis
-
-// let free = false;
-// const validarCliente = (time) => {
-//     let edad = prompt("¿Cual es tu edad?");
-//     if (edad > 17) {
-//         if (time >= 2 && time < 7 && free == false) {
-//             alert("Puedes pasar gratis");
-//             free = true;
-//         } else {
-//             alert("Puedes pasar pero pagas la entrada.")
-//         }
-//     } else {
-//         alert("Menor de edad")
-//     }
-// }
-
-// validarCliente(23);
-// validarCliente(24);
-// validarCliente(0.2);
-// validarCliente(0.6);
-// validarCliente(1);
-// validarCliente(2);
-// validarCliente(2.4);
-// validarCliente(3);
-
-
-//Tomar asistencia de alumnos
-//Repasar... algo complicado de entender y realizar.
-let cantidad = prompt("¿cuantos alumnos son?");
-let alumnosTotales = [];
-
-for(i=0;i<cantidad;i++){
-    alumnosTotales[i] = [prompt("Nombre del alumno " + (i+1)),0];
-}
-const tomarAsistencia = (nombre, p) =>{
-    let presencia = prompt(nombre);
-    if(presencia == "p" || presencia == "P"){
-        alumnosTotales[p][1]++;
+class Celular {
+    constructor(color, peso, tamaño, rdc, ram) {
+        this.color = color;
+        this.peso = peso;
+        this.tamaño = tamaño;
+        this.rdc = rdc;
+        this.ram = ram;
+        this.encendido = false;
+    }
+    //PAra prender y apagar.
+    presionarBotonEncendido() {
+        if (this.encendido == false) {
+            alert("Celular prendido");
+            this.encendido = true;
+        } else {
+            alert("Celular apagado");
+            this.encendido = false;
+        }
+    }
+    reiniciar() {
+        if (this.encendido == true) {
+            alert("Reiniciando celualr")
+        } else {
+            alert("El celular esta apagado");
+        }
+    }
+    tomarFoto() {
+        alert(`Foto tomada en una resolucion de: ${this.rdc}`);
+    }
+    grabarVideo() {
+        alert(`Grabando video en una resolucion de: ${this.rdc}`)
+    }
+    mobileInfo() {
+        return `
+        color: <b>${this.color}</b><br>
+        peso: <b>${this.peso}</b><br>
+        tamaño: <b>${this.tamaño}</b><br>
+        resolucion de video: <b>${this.rdc}</b><br>
+        memoria ram: <b>${this.ram}</b><br>
+        `;
     }
 }
 
-for (i=0;i<30;i++){
-    for(alumno in alumnosTotales){
-        tomarAsistencia(alumnosTotales[alumno][0],alumno);
-    }
-}
+let celular1 = new Celular("negro", "150", "5", "full hd", "2GB");
+let celular2 = new Celular("azul", "160", "7", "hd", "22GB");
+let celular3 = new Celular("blanco", "180", "4", "4k", "164B");
 
-for(alumno in alumnosTotales){
-    let resultado = `${alumnosTotales[alumno][0]}:<br>
-    ______Presentes: <b>${alumnosTotales[alumno][1]}</b><br>
-    ______Ausencias: <b>${30 - alumnosTotales[alumno][1]}</b>`;
+// celular1.presionarBotonEncendido();
+// celular1.tomarFoto();
+// celular1.grabarVideo();
+// celular1.reiniciar();
+// celular1.presionarBotonEncendido();
 
-    if(30 - alumnosTotales[alumno][1] > 18){
-        resultado+= "<b style='color:red'>REPROBADO POR INASISTENCIA</b><br><br>";
-    }else{
-        resultado+= "<br><br>"
-    }
-    document.writeln(resultado);    
-}
+document.writeln(
+    `
+    ${celular1.mobileInfo()}<br>
+    ${celular2.mobileInfo()}<br>
+    ${celular3.mobileInfo()}<br>
+    `
+);
