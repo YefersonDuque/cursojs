@@ -41,20 +41,26 @@ class Celular {
     }
 }
 
-let celular1 = new Celular("negro", "150", "5", "full hd", "2GB");
-let celular2 = new Celular("azul", "160", "7", "hd", "22GB");
-let celular3 = new Celular("blanco", "180", "4", "4k", "164B");
+class CeularAltaGama extends Celular{
+    constructor(color, peso, tamaño, rdc, ram, rdce) {
+        super(color, peso, tamaño, rdc, ram);
+        this.rdce = rdce;
+    }
+    grabarVideoLeto(){
+        alert("Esta grabando en camara lenta");
+    }
+    reconocimientoFacial(){
+        alert("Vamos a iniciar reconocimiento facial");
+    }
+    infoAltaGama(){
+        return this.mobileInfo() + `resolución de camara extra: ${this.rdce}`;
+    }
+}
 
-// celular1.presionarBotonEncendido();
-// celular1.tomarFoto();
-// celular1.grabarVideo();
-// celular1.reiniciar();
-// celular1.presionarBotonEncendido();
+let celular1= new CeularAltaGama("negro","130g","5'", "4k","3GB","full hd")
+let celular2= new CeularAltaGama("rojo","140g","5.5'", "1860","4GB","hd")
 
-document.writeln(
-    `
-    ${celular1.mobileInfo()}<br>
-    ${celular2.mobileInfo()}<br>
-    ${celular3.mobileInfo()}<br>
-    `
+document.writeln( `
+    ${celular1.infoAltaGama()}<br><br>
+    ${celular2.infoAltaGama()}<br>`
 );
