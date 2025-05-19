@@ -40,9 +40,4 @@ class App{
 
 let app = new App("16000","5 estrella","900MB")
 
-// app.instalar();
-// app.abrir();
-// app.cerrar();
-// app.desinstalar();
-
 document.writeln(`${app.appInfo()}<br>`);
