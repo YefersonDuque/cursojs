@@ -15,21 +15,21 @@ const aprobo = () => {
         let asistencias = materias[materia][0];
         let promedio = materias[materia][1];
         let trabajos = materias[materia][2];
-        console.log(materias[materia][3]);
+        document.writeln(materias[materia][3]);
         if (asistencias >= 90) {
-            console.log("%c    Asistencias en orden", "color:green");
+            document.writeln("%c    Asistencias en orden", "color:green");
         } else {
-            console.log("%c    Falta de asistencias", "color:red");
+            document.writeln("%c    Falta de asistencias", "color:red");
         }
         if (promedio >= 7) {
-            console.log("%c    Promedio en orden", "color:green");
+            document.writeln("%c    Promedio en orden", "color:green");
         } else {
-            console.log("%c    Falta de promedio", "color:red");
+            document.writeln("%c    Falta de promedio", "color:red");
         }
         if (trabajos >= 3) {
-            console.log("%c    Trabajos en orden", "color:green");
+            document.writeln("%c    Trabajos en orden", "color:green");
         } else {
-            console.log("%c    Falta de trabajos", "color:red");
+            document.writeln("%c    Falta de trabajos", "color:red");
         }
     }
 }
