@@ -16,4 +16,3 @@ console.countReset() // Esto lo resetea para iniciar de nuevo el conteo
 console.count() // 
 
 //FUNCIONES DE AGRUPACIÓN
-
