@@ -1,0 +1,9 @@
+iniciar después de ubicarse en la carpeta: 
+1. npm créate vite
+2.crea el nombre de la carpeta.
+3.selecciona react
+4.selecciona JavaScript
+5.se ubica con cd en la carpeta creada
+6.npm i
+7.npm run dev
+8.Ingresa el link que muestra
