@@ -7,3 +7,17 @@ iniciar después de ubicarse en la carpeta:
 6.npm i
 7.npm run dev
 8.Ingresa el link que muestra
+
+
+
+-------------------
+
+Crear app de cero en react.
+Verificar que esta node y yarn instalado
+Después de estar ubicado en el archivo donde la va a crear: 
+1. yarn créate vite
+2. Se le pone el nombre al archivo
+3. Seleccionar react
+4. Seleccionar react
+5. Después me ubico de nuevo en la carpeta de react y ejecuto el siguiente: npx create-react-app 'nombre-app'
+Esto se eencarga de crear todos los archivos necesarios.
